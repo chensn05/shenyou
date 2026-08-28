@@ -1,0 +1,36 @@
+{
+  "schema": "cowork-project/v1",
+  "id": "cw_proj_4acec26d-313",
+  "name": "myth-planet",
+  "srcDir": "/home/node/.openclaw/workspace/code/myth-planet",
+  "createdAt": 1787754572333,
+  "updatedAt": 1787926194285,
+  "createdBy": "seal-agent",
+  "stack": "pure-spa-vite",
+  "guardCompliant": true,
+  "pack": {
+    "keep": [
+      "dist"
+    ]
+  },
+  "devConfig": {
+    "preStart": [
+      "test -d node_modules/vite || NODE_ENV=development npm install --silent --include=dev --registry=http://registry.npmmirror.com"
+    ],
+    "run": "npm run dev -- --host 0.0.0.0 --port ${PORT}"
+  },
+  "cowork": {
+    "workId": 196093,
+    "appId": "46106cea",
+    "alias": "myth-planet",
+    "accessUrl": "https://cowork.xiaohongshu.com/s/myth-planet",
+    "coworkAppUrl": "https://cowork.xiaohongshu.com/app/NWEzYzI5M2Qw",
+    "deploymentId": 23190,
+    "deploymentStatus": "RUNNING",
+    "publishedAt": 1787926194285,
+    "visibility": "SELF_ONLY",
+    "rawAccessUrl": "https://cowork.xiaohongshu.com/s/46106cea/",
+    "version": "1.20",
+    "lastZipHash": "sha256:c95325f9155aca0f5925bbc5ceb0c41f9e7708547dd74ce0f26337bbe2dcc22a"
+  }
+}

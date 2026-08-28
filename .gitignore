@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.cowork/
+*.zip
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.local
+.vite/
+# 图片资源暂不推（代理限制大推送）
+public/*.jpg
+public/*.png

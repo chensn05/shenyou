@@ -1,0 +1,272 @@
+// 神游 · 人物图鉴补充包（现有 6 文化圈缺失主角）
+// 与 characters.ts 合并后共 48 人
+
+import type { Character } from './characters'
+
+export const charactersBatch2: Character[] = [
+  // ========== 中国 ==========
+  {
+    id: 'kuafu', name: '夸父', emoji: '🏃',
+    culture: 'china', cultureLabel: '中国神话', source: '《山海经·海外北经》《大荒北经》',
+    identity: '逐日的巨人',
+    deeds: '与日逐走，饮尽河渭，道渴而死；其杖化为邓林',
+    layer: '人间层（九州）',
+    relations: [],
+    relatedStoryIds: ['kuafu'],
+    versionNote: '《海外北经》记为道渴而死，《大荒北经》另记"应龙杀夸父"，两处记载不同。',
+  },
+  {
+    id: 'houyi', name: '后羿', emoji: '🏹',
+    culture: 'china', cultureLabel: '中国神话', source: '《淮南子·本经训》',
+    identity: '射落九日的英雄',
+    deeds: '尧时十日并出，羿射九日，除六害；向西王母求不死药，被妻姮娥窃走',
+    layer: '人间层（九州）',
+    relations: [
+      { targetId: 'change', label: '夫妻', source: '《淮南子·览冥训》' },
+      { targetId: 'xiwangmu', label: '求药于', source: '《淮南子·览冥训》' },
+    ],
+    relatedStoryIds: ['houyi', 'change'],
+    versionNote: '神话中的后羿与历史中有穷氏首领后羿（夏代）是否为同一人，历来有争议。',
+  },
+  {
+    id: 'change', name: '嫦娥', altName: '姮娥', emoji: '🌙',
+    culture: 'china', cultureLabel: '中国神话', source: '《淮南子·览冥训》',
+    identity: '窃药奔月的神女',
+    deeds: '窃西王母不死之药，奔入月中，化为蟾蜍（一说为月精）',
+    layer: '天界层',
+    relations: [
+      { targetId: 'houyi', label: '夫妻', source: '《淮南子·览冥训》' },
+    ],
+    relatedStoryIds: ['change'],
+    versionNote: '"嫦娥"本名"姮娥"，汉代为避文帝刘恒讳改称嫦娥。《归藏》记"昔者恒我窃毋死之药"，恒我即姮娥。',
+  },
+  {
+    id: 'dayu', name: '大禹', emoji: '🌊',
+    culture: 'china', cultureLabel: '中国神话', source: '《尚书·禹贡》《史记·夏本纪》',
+    identity: '治水划九州的圣王',
+    deeds: '继承父鲧未竟之业，改堵为疏，居外十三年，过家门而不入；划定九州，铸九鼎',
+    layer: '人间层（九州）',
+    relations: [],
+    relatedStoryIds: ['dayu'],
+    versionNote: '"三过家门而不入"最早见于《孟子·滕文公上》，《史记》记为"三过门不敢入"，措辞略有差异。',
+  },
+  {
+    id: 'huangdi', name: '黄帝', emoji: '👑',
+    culture: 'china', cultureLabel: '中国神话', source: '《史记·五帝本纪》',
+    identity: '华夏始祖、人文初祖',
+    deeds: '与炎帝合兵，涿鹿之战擒杀蚩尤；制历法、创文字、定制度',
+    layer: '人间层（九州）',
+    relations: [
+      { targetId: 'yandi', label: '兄弟/同盟', source: '《史记·五帝本纪》' },
+    ],
+    relatedStoryIds: ['huangdi'],
+    versionNote: '黄帝是否确有其人、是否为具体个人，学界有不同看法。许多发明创造（文字、历法等）系后人追记归于黄帝名下。',
+  },
+  {
+    id: 'chiyou', name: '蚩尤', emoji: '⚔️',
+    culture: 'china', cultureLabel: '中国神话', source: '《史记·五帝本纪》《山海经》',
+    identity: '九黎族首领、兵主战神',
+    deeds: '与黄帝战于涿鹿，请风伯雨师作大风雨，黄帝遣天女魃止雨，终被擒杀',
+    layer: '人间层（九州）',
+    relations: [
+      { targetId: 'huangdi', label: '敌', source: '《史记·五帝本纪》' },
+    ],
+    relatedStoryIds: ['huangdi'],
+    versionNote: '蚩尤在南方苗族传说中被尊为祖先，形象与中原"反派"叙事截然不同。苗族古歌中蚩尤为始祖"格蚩爷老"。',
+  },
+  {
+    id: 'gonggong', name: '共工', emoji: '💧',
+    culture: 'china', cultureLabel: '中国神话', source: '《淮南子·天文训》《国语·周语》',
+    identity: '怒触不周山的水神',
+    deeds: '与颛顼（一说祝融）争帝，不胜而怒，触不周之山，天柱折、地维绝',
+    layer: '神域层（昆仑）',
+    relations: [],
+    relatedStoryIds: ['gonggong'],
+    versionNote: '《淮南子》记共工与颛顼争帝，《史记·楚世家》记共工与祝融争。争帝对象在不同文献中不一致。',
+  },
+  {
+    id: 'niulang', name: '牛郎', emoji: '🐄',
+    culture: 'china', cultureLabel: '中国神话', source: '《古诗十九首·迢迢牵牛星》',
+    identity: '牵牛星化身、人间牧童',
+    deeds: '与织女相爱，被天帝隔开天河两岸，每年七夕鹊桥相会',
+    layer: '人间层（九州）',
+    relations: [
+      { targetId: 'zhinv', label: '夫妻', source: '《古诗十九首》' },
+    ],
+    relatedStoryIds: ['niulang'],
+  },
+  {
+    id: 'zhinv', name: '织女', emoji: '🧵',
+    culture: 'china', cultureLabel: '中国神话', source: '《古诗十九首·迢迢牵牛星》',
+    identity: '天帝之女、织造云锦的仙女',
+    deeds: '与牛郎相爱被隔天河，年年七夕乘鹊桥相会',
+    layer: '天界层',
+    relations: [
+      { targetId: 'niulang', label: '夫妻', source: '《古诗十九首》' },
+    ],
+    relatedStoryIds: ['niulang'],
+  },
+
+  // ========== 日本 ==========
+  {
+    id: 'izanagi', name: '伊邪那岐', emoji: '☯️',
+    culture: 'japan', cultureLabel: '日本神话', source: '《古事记》上卷',
+    identity: '创世男神、天照之父',
+    deeds: '与妹伊邪那美搅海造国；妻死后追入黄泉，见其腐状而逃；于河边禊祓生三贵子（天照、月读、须佐之男）',
+    layer: '高天原',
+    relations: [
+      { targetId: 'izanami', label: '夫妻', source: '《古事记》上卷' },
+      { targetId: 'amaterasu', label: '父女', source: '《古事记》上卷' },
+      { targetId: 'susanoo', label: '父子', source: '《古事记》上卷' },
+    ],
+    relatedStoryIds: ['yomi'],
+    versionNote: '"禊祓"仪式中从左眼生天照、右眼生月读、鼻生须佐之男——左右眼对应日月是日本神话特有意象。',
+  },
+
+  // ========== 希腊 ==========
+  {
+    id: 'orpheus', name: '俄耳甫斯', emoji: '🎵',
+    culture: 'greek', cultureLabel: '希腊神话', source: '维吉尔《农事诗》卷四；奥维德《变形记》卷十',
+    identity: '能感动万物的竖琴歌手',
+    deeds: '妻欧律狄刻被蛇咬死，以琴声打动冥王冥后获准带回；将出冥界时回头一望，妻魂永远失去',
+    layer: '人间层',
+    relations: [],
+    relatedStoryIds: ['orpheus'],
+    versionNote: '维吉尔版记为"回头"导致失败；奥维德版记为冥后设条件"出界前不可回头"。两版结局一致但细节不同。',
+  },
+  {
+    id: 'theseus', name: '忒修斯', emoji: '⚔️',
+    culture: 'greek', cultureLabel: '希腊神话', source: '普鲁塔克《忒修斯传》；奥维德《变形记》卷八',
+    identity: '雅典国王、杀牛头怪的英雄',
+    deeds: '携克里特公主阿里阿德涅之线团进入迷宫斩杀米诺陶洛斯；归航时父王 Aegeus 望见黑帆，投海而死',
+    layer: '人间层',
+    relations: [],
+    relatedStoryIds: ['theseus'],
+    versionNote: '"忘换白帆"是后世最常见的说法，但部分版本记为忒修斯故意不换——即有意抛弃阿里阿德涅。',
+  },
+  {
+    id: 'icarus', name: '伊卡洛斯', emoji: '🪽',
+    culture: 'greek', cultureLabel: '希腊神话', source: '奥维德《变形记》卷八',
+    identity: '以蜡翅飞天的少年',
+    deeds: '与父代达罗斯以蜡翅逃出克里特迷宫，飞近太阳时蜡融翅落，坠海而死',
+    layer: '人间层',
+    relations: [],
+    relatedStoryIds: ['icarus'],
+  },
+
+  // ========== 北欧 ==========
+  {
+    id: 'baldr', name: '巴德尔', emoji: '✨',
+    culture: 'norse', cultureLabel: '北欧神话', source: '斯诺里《散文埃达》〈欺骗古鲁菲〉',
+    identity: '光明之神、奥丁之子',
+    deeds: '万物立誓不伤他，唯槲寄生未起誓；洛基以槲寄生制矛，引导盲神霍德尔掷出，巴德尔遂死',
+    layer: '阿斯加德',
+    relations: [
+      { targetId: 'loki', label: '被害于', source: '《散文埃达》' },
+    ],
+    relatedStoryIds: ['baldr'],
+    versionNote: '巴德尔之死被视作诸神黄昏的序曲——此后洛基被缚，诸神走向毁灭。',
+  },
+  {
+    id: 'tyr', name: '提尔', emoji: '🤝',
+    culture: 'norse', cultureLabel: '北欧神话', source: '斯诺里《散文埃达》〈欺骗古鲁菲〉',
+    identity: '独臂的战神与誓言之神',
+    deeds: '诸神以格莱普尼尔束缚芬里尔时，以右手为质放入狼口；巨狼被缚后即咬断其手',
+    layer: '阿斯加德',
+    relations: [],
+    relatedStoryIds: ['fenrir-bound'],
+    versionNote: '"牺牲一手以缚巨狼"是"守信"的极端象征——明知必失仍履约。',
+  },
+  {
+    id: 'freyja', name: '弗蕾雅', emoji: '💎',
+    culture: 'norse', cultureLabel: '北欧神话', source: '《诗体埃达·〈Þrymskviða〉（索列姆之歌）》',
+    identity: '华纳神族的爱与战之神',
+    deeds: '索尔失锤，巨人们索要弗蕾雅为聘；弗蕾雅不肯，洛基献计让索尔扮新娘夺回神锤',
+    layer: '华纳海姆',
+    relations: [
+      { targetId: 'thor', label: '同行', source: '《Þrymskviða》' },
+    ],
+    relatedStoryIds: ['thrym'],
+    versionNote: '弗蕾雅属华纳神族（Vanir），非阿斯加德的阿萨神族（Æsir），但居于阿斯加德。',
+  },
+
+  // ========== 印度 ==========
+  {
+    id: 'shiva', name: '湿婆', altName: '大自在天', emoji: '🔱',
+    culture: 'india', cultureLabel: '印度神话', source: '《林伽往世书》；《摩诃婆罗多》',
+    identity: '三相神之一·毁灭与再生之神',
+    deeds: '以发承接恒河降世，免大地崩裂；舞"宇宙之舞"（Tandava）象征万物生灭',
+    layer: '梵天界',
+    relations: [],
+    relatedStoryIds: ['ganga'],
+    versionNote: '湿婆的"毁灭"非终结，而是转化——与毗湿奴的"维护"、梵天的"创造"构成三相循环。',
+  },
+  {
+    id: 'rama', name: '罗摩', emoji: '🏹',
+    culture: 'india', cultureLabel: '印度神话', source: '《罗摩衍那》（蚁垤仙人）',
+    identity: '毗湿奴第七化身、理想之王',
+    deeds: '被流放森林十四年，妻悉多被楞伽王罗波那掳走；率猴军跨海攻城，杀罗波那夺回妻子',
+    layer: '人间界',
+    relations: [],
+    relatedStoryIds: ['rama-sita'],
+    versionNote: '《罗摩衍那》存在多个版本：蚁垤梵语原本、泰国《拉玛坚》、柬埔寨《Reamker》等情节有差异。',
+  },
+  {
+    id: 'hanuman', name: '哈努曼', emoji: '🐒',
+    culture: 'india', cultureLabel: '印度神话', source: '《罗摩衍那》',
+    identity: '风神之子、猴军统帅',
+    deeds: '为救悉多飞跃大海至楞伽；搬整座药山疗伤；在《罗摩衍那》中是最忠诚的辅佐者',
+    layer: '人间界',
+    relations: [
+      { targetId: 'rama', label: '主从/挚友', source: '《罗摩衍那》' },
+    ],
+    relatedStoryIds: ['rama-sita'],
+    versionNote: '哈努曼在印度教中独立受崇拜，被认为与《西游记》孙悟空形象有关联。',
+  },
+  {
+    id: 'ganesha', name: '迦内什', altName: '象头神', emoji: '🐘',
+    culture: 'india', cultureLabel: '印度神话', source: '《迦内什往世书》；《湿婆往世书》',
+    identity: '象首人身·智慧之神、除障者',
+    deeds: '为母守门，被不知情的父亲湿婆斩首；湿婆以象首复活之，封为群主（Gana-pati），万事开头先敬之',
+    layer: '天界（因陀罗）',
+    relations: [
+      { targetId: 'shiva', label: '父子', source: '《湿婆往世书》' },
+    ],
+    relatedStoryIds: ['ganesha'],
+    versionNote: '"除障者"身份使印度教任何仪式开头必先敬迦内什——这一传统至今延续。',
+  },
+  {
+    id: 'krishna', name: '黑天', altName: '克里希纳', emoji: '🦚',
+    culture: 'india', cultureLabel: '印度神话', source: '《摩诃婆罗多》；《薄伽梵往世书》',
+    identity: '毗湿奴第八化身、《薄伽梵歌》的讲述者',
+    deeds: '幼时以小指托起牛增山七日护村民避雨；成年后于俱卢之野为阿周那驾车并讲述《薄伽梵歌》',
+    layer: '人间界',
+    relations: [
+      { targetId: 'indra', label: '对抗/庇护', source: '《薄伽梵往世书》' },
+    ],
+    relatedStoryIds: ['krishna-hill'],
+    versionNote: '黑天形象极丰富：顽童、牧牛少年、哲学导师、政治谋士——不同文献侧重不同面相。',
+  },
+
+  // ========== 美索不达米亚 ==========
+  {
+    id: 'gilgamesh', name: '吉尔伽美什', emoji: '🦁',
+    culture: 'mesopotamia', cultureLabel: '美索不达米亚神话', source: '《吉尔伽美什史诗》（泥板十二块）',
+    identity: '乌鲁克三分之二神性之王',
+    deeds: '与挚友恩奇都屠天牛、杀洪巴巴；恩奇都死后恐惧死亡，寻永生者乌特纳皮什提姆，终未得不死之草',
+    layer: '大地层（恩利尔）',
+    relations: [],
+    relatedStoryIds: ['gilgamesh-flood'],
+    versionNote: '乌特纳皮什提姆的洪水故事是《圣经》诺亚方舟的原型之一——"七日暴风、三放飞鸟"情节几乎相同。',
+  },
+  {
+    id: 'utnapishtim', name: '乌特纳皮什提姆', emoji: '🚢',
+    culture: 'mesopotamia', cultureLabel: '美索不达米亚神话', source: '《吉尔伽美什史诗》第十一块泥板',
+    identity: '受诸神赐予永生的洪水幸存者',
+    deeds: '神明埃阿暗中告知将降大洪水，造方舟携家人与百兽得免；事后诸神赐其永生，居于"远不可及之处"',
+    layer: '大地层（恩利尔）',
+    relations: [],
+    relatedStoryIds: ['gilgamesh-flood'],
+    versionNote: '"三放飞鸟"（鸽、燕、渡鸦）探测水退的情节，与《创世记》中诺亚放飞鸟高度相似。',
+  },
+]
