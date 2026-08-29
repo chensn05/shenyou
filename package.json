@@ -1,12 +1,13 @@
 {
-  "name": "cowork-pure-spa-vite",
+  "name": "shenyou",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.20.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "vue": "^3.4.0",
@@ -17,7 +18,8 @@
     "vite": "^5.2.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.4.0",
-    "vue-tsc": "^2.0.0"
+    "vue-tsc": "^2.0.0",
+    "wrangler": "^4.0.0"
   },
   "engines": {
     "node": ">=18"
