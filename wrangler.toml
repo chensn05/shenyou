@@ -1,5 +1,6 @@
 name = "shenyou"
-compatibility_date = "2025-08-01"
+account_id = "7cf8a1a763408684b9604e6d43a38996"
+compatibility_date = "2025-01-01"
 
 [assets]
 directory = "./dist"
